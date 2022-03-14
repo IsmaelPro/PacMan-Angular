@@ -1,0 +1,20 @@
+<app-grid
+  (responseEmitter)="receivingSquares($event)"
+  [score]="score"
+></app-grid>
+
+<app-pacman
+  [squares]="squares"
+  (responseEmitter)="receivingPacmanCurrentIndex($event)"
+></app-pacman>
+
+<app-ghosts
+  [width]="width"
+  [squares]="squares"
+  (responseEmitter)="receivingGhosts($event)"
+></app-ghosts>
+
+<audio>
+  <source src="../../assets/musics/pac-man-sound.mp3" />
+  <!-- <source src="audio/beep.ogg"/> -->
+</audio>
